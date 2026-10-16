@@ -6,97 +6,93 @@ function clone<T>(v: T): T {
   return structuredClone(v);
 }
 
-/** Shared realistic content used as a base for every template demo. */
+/** Fictional demo content only — not real personal data. */
 const REFERENCE_BASE: Biodata = {
   profilePhoto: SAMPLE_AVATAR_DATA_URL,
   personalDetails: [
-    { id: "pd-dob", label: "Date Of Birth", value: "03 April 1997" },
-    { id: "pd-height", label: "Height", value: '5\'6"' },
-    { id: "pd-weight", label: "Weight", value: "75 kg" },
-    {
-      id: "pd-native",
-      label: "Native Place",
-      value: "Chitravad, Jamkandorda, Rajkot",
-    },
+    { id: "pd-dob", label: "Date Of Birth", value: "12 May 1996" },
+    { id: "pd-height", label: "Height", value: '5\'4"' },
+    { id: "pd-weight", label: "Weight", value: "52 kg" },
+    { id: "pd-native", label: "Native Place", value: "Dwarka, New Delhi" },
     {
       id: "pd-address",
       label: "Address",
-      value: "A/902, Shukan Rivera, Causeway Rd, Singanpore, Surat",
+      value: "B-902, Sunrise Residency, Sector 19, Dwarka, New Delhi · 110075",
     },
-    { id: "pd-mobile", label: "Mobile No", value: "+91 95101 44724" },
+    { id: "pd-mobile", label: "Mobile No", value: "+91 98765 43210" },
     {
       id: "oc-company",
       label: "Company",
-      value: "Amberstudent, Pune",
+      value: "Acme Marketing Pvt Ltd, Gurgaon",
     },
-    { id: "oc-salary", label: "Salary", value: "51 LPA CTC" },
+    { id: "oc-salary", label: "Salary", value: "Demo only" },
   ],
   overview: [
     {
       id: "ov-summary",
       label: "Summary",
       value:
-        "Lead Software Engineer at Amberstudent, Pune · B.Tech ICT, DAIICT · Native: Chitravad, Jamkandorda, Rajkot.",
+        "Sample biodata for layout preview · MBA, Marketing · New Delhi.",
     },
   ],
   property: [
     {
       id: "pr-res",
       label: "Residence",
-      value: "3 BHK flats at Surat & Ahmedabad",
+      value: "Family apartment in Dwarka, New Delhi",
     },
-    { id: "pr-agri", label: "Agri. Land", value: "7 vigha at Chitravad" },
+    { id: "pr-agri", label: "Agri. Land", value: "Not applicable" },
   ],
   familyDetails: [
     {
       id: "fd-father",
       label: "Father's Name",
-      value: "Rasikbhai Nathabhai Bhut",
+      value: "Harpreet Singh Khurana",
     },
-    { id: "fd-fjob", label: "Father's Job", value: "Teacher" },
+    { id: "fd-fjob", label: "Father's Job", value: "Retd. Army Officer" },
     {
       id: "fd-mother",
       label: "Mother's Name",
-      value: "Vanitaben Rasikbhai Bhut",
+      value: "Simran Kaur Khurana",
     },
-    { id: "fd-bro", label: "Brother", value: "Vikas Patel (Married)" },
-    { id: "fd-bjob", label: "Brother's Job", value: "ONGC, Mumbai" },
+    { id: "fd-bro", label: "Brother", value: "Kabir Singh (unmarried)" },
+    { id: "fd-bjob", label: "Brother's Job", value: "Chartered Accountant" },
     {
       id: "fd-sil",
       label: "Sister-in-Law",
-      value: "Kajal Vikas Patel",
+      value: "—",
     },
-    { id: "fd-sjob", label: "Her Job", value: "LTIMindtree, Mumbai" },
+    { id: "fd-sjob", label: "Her Job", value: "—" },
   ],
   education: [
-    { id: "ed-level", label: "Education", value: "B.Tech in ICT" },
+    { id: "ed-level", label: "Education", value: "MBA, Marketing" },
     {
       id: "ed-prof",
       label: "Profession",
-      value: "Lead Software Engineer",
+      value: "Marketing Manager",
     },
     {
       id: "ed-college",
       label: "College",
-      value: "DA-IICT, Gandhinagar",
+      value: "IIM Ahmedabad (2020)",
     },
-    { id: "ed-duration", label: "Duration", value: "2015–2019" },
+    { id: "ed-duration", label: "Duration", value: "2018–2020" },
   ],
   maternalDetails: [
     {
       id: "md-uncle1",
       label: "Uncle's Name",
-      value: "Rajeshbhai Hirajibhai Manvar",
+      value: "Paramjeet Singh Kohli",
     },
     {
       id: "md-uncle2",
       label: "Uncle's Name",
-      value: "Vinaybhai Hirajibhai Manvar",
+      value: "Gurpreet Singh Kohli",
     },
     {
       id: "md-native",
       label: "Native Place",
-      value: "Anida Vachhra, Kotda, Rajkot",
+      value: "Amritsar, Punjab",
     },
   ],
   customSections: [],
@@ -170,70 +166,65 @@ const classicExtras: BiodataSection[] = [
   },
 ];
 
-/** Shorter copy so the compact layout usually stays on a single A4 page. */
+/** Shorter fictional copy so the compact layout usually stays on one A4 page. */
 const COMPACT_OVERRIDES: Partial<Biodata> = {
   overview: [
     {
       id: "ov-summary",
       label: "Summary",
-      value:
-        "Lead SWE (Amberstudent, Pune) · ICT, DA-IICT · Rajkot native.",
+      value: "Demo · MBA Marketing · New Delhi.",
     },
   ],
   personalDetails: [
-    { id: "pd-dob", label: "Date Of Birth", value: "03 Apr 1997" },
-    { id: "pd-height", label: "Height", value: '5\'6"' },
-    { id: "pd-weight", label: "Weight", value: "75 kg" },
-    {
-      id: "pd-native",
-      label: "Native Place",
-      value: "Chitravad, Jamkandorda, Rajkot",
-    },
+    { id: "pd-dob", label: "Date Of Birth", value: "12 May 1996" },
+    { id: "pd-height", label: "Height", value: '5\'4"' },
+    { id: "pd-weight", label: "Weight", value: "52 kg" },
+    { id: "pd-native", label: "Native Place", value: "Dwarka, New Delhi" },
     {
       id: "pd-address",
       label: "Address",
-      value: "A/902 Shukan Rivera, Singanpore, Surat",
+      value: "B-902 Sunrise Residency, Dwarka, New Delhi",
     },
-    { id: "pd-mobile", label: "Mobile No", value: "+91 95101 44724" },
+    { id: "pd-mobile", label: "Mobile No", value: "+91 98765 43210" },
     {
       id: "oc-company",
       label: "Company",
-      value: "Amberstudent, Pune",
+      value: "Acme Marketing, Gurgaon",
     },
-    { id: "oc-salary", label: "Salary", value: "51 LPA CTC" },
+    { id: "oc-salary", label: "Salary", value: "Demo only" },
   ],
   familyDetails: [
     {
       id: "fd-father",
       label: "Father's Name",
-      value: "Rasikbhai N. Bhut",
+      value: "Harpreet S. Khurana",
     },
-    { id: "fd-fjob", label: "Father's Job", value: "Teacher" },
+    { id: "fd-fjob", label: "Father's Job", value: "Retd. Army Officer" },
     {
       id: "fd-mother",
       label: "Mother's Name",
-      value: "Vanitaben R. Bhut",
+      value: "Simran K. Khurana",
     },
-    { id: "fd-bro", label: "Brother", value: "Vikas Patel (m.)" },
-    { id: "fd-bjob", label: "Brother's Job", value: "ONGC, Mumbai" },
-    { id: "fd-sil", label: "Sister-in-Law", value: "Kajal V. Patel" },
-    { id: "fd-sjob", label: "Her Job", value: "LTIMindtree, Mumbai" },
+    { id: "fd-bro", label: "Brother", value: "Kabir Singh" },
+    { id: "fd-bjob", label: "Brother's Job", value: "CA" },
+    { id: "fd-sil", label: "Sister-in-Law", value: "—" },
+    { id: "fd-sjob", label: "Her Job", value: "—" },
   ],
   maternalDetails: [
     {
       id: "md-uncle1",
       label: "Uncle's Name",
-      value: "Rajeshbhai H. Manvar",
+      value: "Paramjeet S. Kohli",
     },
     {
       id: "md-uncle2",
       label: "Uncle's Name",
-      value: "Vinaybhai H. Manvar",
+      value: "Gurpreet S. Kohli",
     },
     {
       id: "md-native",
       label: "Native Place",
-      value: "Anida Vachhra, Kotda, Rajkot",
+      value: "Amritsar, Punjab",
     },
   ],
 };
@@ -384,15 +375,18 @@ const HERITAGE_TAN_SAMPLE: Biodata = {
   ],
 };
 
-const cache: Partial<Record<TemplateId, Biodata>> = {};
+function demoDocument(base: Biodata): Biodata {
+  const next = clone(base);
+  next.additionalPhotos = undefined;
+  next.hiddenPredefinedSections = undefined;
+  return next;
+}
 
 /**
- * Fresh clone of the demo biodata styled for the given template.
+ * Fresh clone of fictional demo biodata for the given template.
  * Import via “Load demo for this layout” or call from tests.
  */
 export function sampleBiodataForTemplate(id: TemplateId): Biodata {
-  if (cache[id]) return clone(cache[id]!);
-
   let next: Biodata;
   switch (id) {
     case "basic":
@@ -417,8 +411,7 @@ export function sampleBiodataForTemplate(id: TemplateId): Biodata {
       next = clone(HERITAGE_TAN_SAMPLE);
       break;
   }
-  cache[id] = next;
-  return clone(next);
+  return demoDocument(next);
 }
 
 /** All templates → demo payload (for exporting JSON fixtures if needed). */

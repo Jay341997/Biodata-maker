@@ -174,7 +174,7 @@ export default function App() {
     replaceBiodata(sampleBiodataForTemplate(template));
     setJsonImportNotice({
       type: "success",
-      message: `Demo data loaded for “${TEMPLATE_LABELS[template]}”.`,
+      message: `Fictional demo data loaded for “${TEMPLATE_LABELS[template]}” (your edits were replaced).`,
     });
   }
 
