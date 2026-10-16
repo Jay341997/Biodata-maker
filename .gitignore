@@ -5,3 +5,6 @@ dist
 .env
 .env.*
 tsconfig.tsbuildinfo
+
+# Personal biodata exports (keep local only)
+jay-patel-biodata.json
